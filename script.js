@@ -105,7 +105,7 @@ const buttonFunctions = {
         text.style.cssText = `
          animation: cake 4s ease-in 1 forwards; 
          color: #DC143C;
-         font-size:32px;
+         font-size:25px;
         `;
         const btn = document.querySelector('.btn');
         btn.style.cssText = `
