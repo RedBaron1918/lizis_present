@@ -104,6 +104,8 @@ const buttonFunctions = {
         text.textContent = "Happy Birthday Special Girl ❤";
         text.style.cssText = `
          animation: cake 4s ease-in 1 forwards; 
+         color: #DC143C;
+         font-size:32px;
         `;
         const btn = document.querySelector('.btn');
         btn.style.cssText = `
