@@ -1,9 +1,6 @@
 function random(num) {
     return Math.floor(Math.random() * num);
 }
-
-
-
 function getRandomStyles() {
     var r = random(255);
     var g = random(255);
@@ -19,15 +16,21 @@ function getRandomStyles() {
     `;
 }
 
+let colorIndex = 0;
+
 function getNameStyle() {
+    const colors = ['#DC143C', '#800080'];
+    const currentColor = colors[colorIndex];
+
+    colorIndex = (colorIndex + 1) % colors.length;
+
     return `
-         background-color: rgba(${200},${200},${200},0.7);
-         color: #000;
-        animation: test 5s ease-in 1 forwards; 
-
-    `
+        background-color: ${currentColor};
+        color: #000;
+        animation: test 5s ease-in 1 forwards;
+        box-shadow: inset -7px -3px 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
+    `;
 }
-
 function createBalloons(num) {
     let balloons = []
     for (var i = num; i > 0; i--) {
@@ -54,6 +57,9 @@ function createName() {
         balloon.className = "balloon";
         balloon.style.cssText = getNameStyle();
         balloon.textContent = lizi[i];
+        balloon.style.color = '#fff';
+        balloon.style.fontWeight = 'bold';
+
         name.appendChild(balloon);
     }
 }
@@ -106,6 +112,7 @@ const buttonFunctions = {
          animation: cake 4s ease-in 1 forwards; 
          color: #DC143C;
          font-size:25px;
+         font-weight: bold;
         `;
         const btn = document.querySelector('.btn');
         btn.style.cssText = `
