@@ -65,7 +65,7 @@ function createName() {
 }
 
 const buttonFunctions = {
-    'Turn On Lights': function () {
+    'Dagvatenda?': function () {
         document.body.classList.add("change-bg");
         document.querySelectorAll(".bulb").forEach(function (bulb) {
             const img = document.createElement("img");
@@ -86,22 +86,22 @@ const buttonFunctions = {
             });
         }, 1000);
 
-        updateButton('Put On Some Decorations');
+        updateButton('Ah Yes Carieli Otaxi!');
     },
-    'Put On Some Decorations': function () {
+    'Ah Yes Carieli Otaxi!': function () {
 
         const banner = document.querySelector(".banner");
         banner.classList.add("drop-banner");
-        updateButton('LET THERE BE BALLOONS');
+        updateButton('Mainc Carie...WTF?!');
     },
-    'LET THERE BE BALLOONS': function () {
+    'Mainc Carie...WTF?!': function () {
         console.log("BalLoons");
         createBalloons(30)
         createName();
-        updateButton('and finally STRAWBERRY CAKE');
+        updateButton('Imedia Morcha Siurpriz...is that a cake?');
     },
 
-    'and finally STRAWBERRY CAKE': function () {
+    'Imedia Morcha Siurpriz...is that a cake?': function () {
         const cake = document.querySelector(".cake-wrapper");
         cake.style.cssText = `
          animation: cake 3s ease-in 1 forwards; 
@@ -147,7 +147,7 @@ function updateButton(nextFunction, fadeAway = true) {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    updateButton('Turn On Lights', false);
+    updateButton('Dagvatenda?', false);
 });
 
 
